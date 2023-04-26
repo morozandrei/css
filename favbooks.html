@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Favorite Books</title>
+    <style>
+        /* quotes section styling*/
+        #quotes>blockquote::before {
+            content: "\21E8"; /* hex for Unicode rightward white arrow */
+            border-color: #c1fcfb;
+            border-style: solid;
+            border-width: 0 0.5em 0 0;
+        }
+        blockquote:nth-last-child(1), blockquote:nth-last-child(2) {
+            font-style: oblique;
+            font-size: larger;
+        }
+
+        /* form related selectors */
+        .book-genre {
+            color: blue;
+            font-style: italic;
+        }
+        label:has(input[type="checkbox"]:checked) {
+            color: red;
+            text-decoration: underline;
+        }
+        label:has(input[type="radio"]:checked) {
+            color: red;
+            text-decoration: underline;
+        }
+        fieldset {
+            border-color: aquamarine;
+            padding: 1em;
+        }
+        label:has(input:required)::after {
+            content: " *";
+            color: red;
+        }
+        .email:invalid { 
+            background-color: ivory;
+            outline: 2px solid red;
+            border: 2px solid ivory;
+            border-radius: 1px;
+        }
+
+        /* dialog styling */
+        dialog::backdrop {
+            background: #c1fcfb;
+            opacity: 50%;
+        }
+
+        /* table basic styling */
+        th, td {
+            padding-left: 1.5em;
+            text-align: left;
+        }
+        #top-books:hover {
+            background-color: #c1fcfb;
+        }
+        th:first-of-type, td:first-of-type {
+            text-decoration: underline;
+        }
+        td:nth-of-type(2) {
+            font-style: oblique;
+        }
+        thead>tr>th, tbody>tr>td {
+            color:slategray;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>My Favorite Books</h1>
+</header>
+
+<section id="quotes">
+    <h2>Favorite Quotes</h2>
+    <blockquote>
+        "It is our choices, Harry, that show what we truly are, 
+        far more than our abilities." - J.K. Rowling, 
+        Harry Potter and the Chamber of Secrets
+    </blockquote>
+    <blockquote>
+        "The only way out of the labyrinth of suffering is to forgive." - 
+        John Green, Looking for Alaska
+    </blockquote>
+</section>
+
+<section id="top-books">
+    <h2>Top 10 Favorite Books</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Rank</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Rating</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>To Kill a Mockingbird</td>
+            <td>Harper Lee</td>
+            <td>9.0/10</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Pride and Prejudice</td>
+            <td>Jane Austen</td>
+            <td>8.8/10</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>The Great Gatsby</td>
+            <td>F. Scott Fitzgerald</td>
+            <td>8.5/10</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>1984</td>
+            <td>George Orwell</td>
+            <td>8.4/10</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>To the Lighthouse</td>
+            <td>Virginia Woolf</td>
+            <td>8.2/10</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Beloved</td>
+            <td>Toni Morrison</td>
+            <td>8.0/10</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>The Catcher in the Rye</td>
+            <td>J.D. Salinger</td>
+            <td>7.8/10</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>The Color Purple</td>
+            <td>Alice Walker</td>
+            <td>7.5/10</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Frankenstein</td>
+            <td>Mary Shelley</td>
+            <td>7.3/10</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>The Handmaid's Tale</td>
+            <td>Margaret Atwood</td>
+            <td>7.1/10</td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="form">
+    <h2>What are Your Favorite Books?</h2>
+    <form>
+        <fieldset>
+            <legend>Select all genres that you enjoy:</legend>
+            <label class="book-genre"><input type="checkbox" name="genre" value="mystery">Mystery</label>
+            <label class="book-genre"><input type="checkbox" name="genre" value="sci-fi">Science Fiction</label>
+            <label class="book-genre"><input type="checkbox" name="genre" value="fantasy">Fantasy</label>
+            <label class="book-genre"><input type="checkbox" name="genre" value="romance">Romance</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>What is your favorite book format?</legend>
+            <label><input type="radio" name="format" value="print">Print</label>
+            <label><input type="radio" name="format" value="ebook">Ebook</label>
+            <label><input type="radio" name="format" value="audiobook">Audiobook</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Select your favorite book from the list:</legend>
+            <label>
+                <select name="favorite-book">
+                    <option value="To Kill a Mockingbird">To Kill a Mockingbird</option>
+                    <option value="Pride and Prejudice">Pride and Prejudice</option>
+                    <option value="The Great Gatsby">The Great Gatsby</option>
+                    <option value="1984">1984</option>
+                    <option value="To the Lighthouse">To the Lighthouse</option>
+                    <option value="Beloved">Beloved</option>
+                    <option value="The Catcher in the Rye">The Catcher in the Rye</option>
+                    <option value="The Color Purple">The Color Purple</option>
+                    <option value="Frankenstein">Frankenstein</option>
+                    <option value="The Handmaid's Tale">The Handmaid's Tale</option>
+                </select>
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Enter your email</legend>
+            <label><input class="email" type="email" pattern=".+@gmail.com" size="30" 
+                    maxlength="64" placeholder="username@gmail.com"
+                    title="Please provide only a username@gmail.com email address" 
+                    required> email</label> 
+        </fieldset>
+        <fieldset>
+            <legend>Share your thoughts on your favorite book:</legend>
+            <label>
+                <textarea name="thoughts" rows="5" cols="40"></textarea>
+            </label>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<dialog id="dialog">
+    <h2>Thank you for your submission!</h2>
+    <p>We will review your favorite books and add them to our list.</p>
+    <button type="button" id="close-dialog">Close</button>
+</dialog>
+
+<script>
+  const form = document.querySelector('form');
+  const dialog = document.querySelector('#dialog');
+  const closeDialog = document.querySelector('#close-dialog');
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    dialog.showModal();
+  });
+
+  closeDialog.addEventListener('click', () => {
+    dialog.close();
+  });
+</script>
+</body>
+</html>
