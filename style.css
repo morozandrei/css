@@ -1,0 +1,17 @@
+article {
+    margin: auto;
+    width: 700px;
+}    
+.some-story > img:first-of-type {
+    float: right;
+    padding: 1.5em;
+}
+/* !!!this id name isn't semantic!!! */
+#cleared { 
+    clear: right;
+    margin: 0.5em 0 1.5em 0;
+}
+article img:nth-last-child(even) {
+    float: left;
+    padding: 1.5em;
+}
