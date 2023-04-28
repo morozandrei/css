@@ -4,7 +4,7 @@ article {
 }    
 .some-story > img:first-of-type {
     float: right;
-    padding: 1.5em;
+    padding: 0 0 1em 1em;
 }
 /* !!!this id name isn't semantic!!! */
 #cleared { 
@@ -13,5 +13,5 @@ article {
 }
 article img:nth-last-child(even) {
     float: left;
-    padding: 1.5em;
+    padding: 0 1em 0 0;
 }
