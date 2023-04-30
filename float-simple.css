@@ -7,7 +7,7 @@ article {
     padding: 0 0 1em 1em;
 }
 /* !!!this id name isn't semantic!!! */
-#cleared { 
+.cleared { 
     clear: right;
     margin: 0.5em 0 1.5em 0;
 }
