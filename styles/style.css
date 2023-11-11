@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap');
+
+body {
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
+	font-size: initial;
+}
+
+
+.main-cont {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border: 1px solid lightgrey;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 0.6em;
+	width: 20em;
+	padding: 0.5em;
+}
+.top-cont {
+	display: flex;
+}
+.logo {
+	height: 2.5em;
+	width: 2.5em;
+}
+.main-photo {
+	margin-top: 3em;
+	border: none;
+	margin-right: -1.5em;
+}
+.sticks {
+	margin-left: auto;
+	margin-right: auto;
+}
+.stick {
+	height: 4em;
+	width: 4em;
+	border-radius: 50%;
+	display: flex;
+	flex-direction: column;
+}
+.promo {
+	position: absolute;
+}
+.promo:hover {
+	opacity: 0;
+}
+
+
+h4 {
+	font-size: larger;
+	/* font-weight: 400; */
+	text-align: left;
+}
+
+
+.message-box {
+    height: 2.5em;
+	width: 2.5em;
+	vertical-align: middle;
+	display: inline-block;
+}
+input {
+    border: none;
+	outline: none;
+	width: 16em;
+	font-size: medium;
+	font-weight: 200;
+	color: grey;
+}
+
+
+.pricing {
+	display: flex;
+	align-items:last baseline;
+	justify-content: space-between;
+}
+.pricing p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.old-price {
+	position: relative;
+	top: 0.7em;
+	font-size: larger;
+	font-weight: 300;
+	color: grey;
+	text-decoration: line-through;
+}
+.new-price {
+	font-size: xx-large;
+	font-weight: 700;
+}
+.new-price span {
+	font-size: large;
+	font-weight: 600;
+}
+.pricing span {
+	color: initial;
+	font-weight: 600;
+}
+.discount {
+    text-align: right;
+}
+
+
+hr {
+	border: 1px solid rgb(235, 235, 235);
+    margin: 0;
+	margin-top: -0.4em;
+	height: 0;
+	border-radius: 10%;
+}
+
+
+.leasing {
+	display: flex;
+	align-items: last baseline;
+	justify-content: space-between;
+	margin-top: 0.5em;
+}
+.leasing p {
+	margin-top: 0;
+	margin-bottom: 0;
+	color: rgb(130, 130, 255);
+}
+.leasing-amount {
+	font-size: xx-large;
+	font-weight: 700;
+}
+.leasing-amount span {
+	font-size: large;
+	font-weight: 600;
+}
+.leasing-prop {
+	text-align: right;
+}
+
+.add-to-cart {
+    margin-top: -0.3em;
+	display: flex;
+	justify-content: space-between;
+	align-items: last baseline;
+}
+button {
+	width: 10em;
+	height: 3em;
+    text-align: left;
+	padding-top: 0.3em;
+	background-color: orange;
+	border-radius: 10px;
+	border: none;
+}
+.add-to-cart img {
+	height: 2.1em;
+	width: 2.4em;
+}
+.add-to-cart span {
+	position: relative;
+	bottom: 0.6em;
+	left: 1em;
+	font-size: small;
+	font-weight: 200;
+}
+.utilities {
+	position: relative;
+	top: 0.3em;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+.utilities img {
+	margin-left: 0.7em;
+	margin-right: 0.7em;
+}
+#arrow {
+    margin-right: 0;
+}
